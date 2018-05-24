@@ -1,4 +1,4 @@
-"# django-todo-list" 
+# django-todo-list
 
 ```shell
 # 顯示所有安裝的套件
