@@ -1,22 +1,18 @@
-{% extends "layout.html" %}
-
+{% extends 'layout.html' %}
 
 {% block body %}
-
-    <div class="row">
-        <div class="col">
-            <h1>#{{ todo.id }} - {{ todo.title }}</h1>
-
-            <hr>
-            <a class="btn btn-outline-info btn-sm float-right" style="margin-left: 20px; " href="{% url 'todo:edit' todo.id %}">Edit</a>
-            <a class="btn btn-outline-danger btn-sm float-right" href="{% url 'todo:delete' todo.id %}">Delete</a>
-            {{ todo.content }}
-
-            <hr>
-
-            <a href="{% url 'todo:index' %}"><< Back to list</a>
-         </div>
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'todo:delete' todo.id %}" class="btn btn-outline-danger float-right mt-1 mx-2">Delete</a>
+{#      <button type="button" class="btn btn-outline-danger float-right mx-2 mt-1" onclick="delete_todo('{{ todo.id }}')">Delete</button>#}
+      <a href="{% url 'todo:edit' todo.id %}" class="btn btn-outline-info float-right mt-1">Edit</a>
+        <h1>#{{ todo.id }} {{ todo.title }}</h1>
+      <hr>
+      <p>
+        {{ todo.content }}
+      </p>
 
     </div>
-{% endblock %}
+  </div>
 
+{% endblock %}

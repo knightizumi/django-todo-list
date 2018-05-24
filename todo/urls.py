@@ -11,3 +11,4 @@ urlpatterns = [
     path('<int:pk>/edit/', v.edit, name='edit'),
     path('<int:pk>/delete/', v.delete, name='delete'),
 ]
+
