@@ -47,6 +47,6 @@ $ where python
 # 安裝 djangorestframework
 $ pip install djangorestframework
 
-# 
+# 建立api app
 $ python manage.py startapp api
 ```
