@@ -17,6 +17,19 @@
 <body>
     {# m=margin y=y軸  #}
     <div class="container my-3">
+
+    {#    判斷登入後才顯示登出#}
+    <div class="row">
+        <div class="col-12 mb-3">
+            {% if request.user.is_authenticated %}
+                Hello {{ request.user.username }}
+                <a href="{% url 'logout' %}" class="btn btn-outline-primary  float-right">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-info float-right">Login</a>
+            {% endif %}
+        </div>
+    </div>
+
         {% block body %}{% endblock %}
     </div>
 </body>

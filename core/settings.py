@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'todo',
     'api',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Login.html 登入完跳到todo
+LOGIN_REDIRECT_URL = '/todo/'
+# 登出完跳到login
+LOGOUT_REDIRECT_URL= '/login/'
+
+LOGIN_URL = '/login/'
