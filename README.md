@@ -23,6 +23,9 @@ $ pip install ipython
 # 安裝 bootstrap4
 $ pip install django-bootstrap4
 
+# 安裝 djangorestframework
+$ pip install djangorestframework
+
 # 建立 Django專案 核心目錄
 $ django-admin startproject core .
 
@@ -44,9 +47,18 @@ $ python manage.py runserver
 # 哪裡有 Python
 $ where python
 
-# 安裝 djangorestframework
-$ pip install djangorestframework
-
 # 建立api app
 $ python manage.py startapp api
+
+# 可分享檔案
+$ python -m http.server
+
+# 紀錄專案用過的套件及版本
+$ pip freeze > ./requirements.txt
+
+# 安裝紀錄的套件及版本
+$ pip install -r requirements.txt
+
+
+
 ```
