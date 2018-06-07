@@ -135,3 +135,10 @@ LOGIN_REDIRECT_URL = '/todo/'
 LOGOUT_REDIRECT_URL= '/login/'
 
 LOGIN_URL = '/login/'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '10646006@ntub.edu.tw'
+EMAIL_HOST_PASSWORD = 'K2230023'
+

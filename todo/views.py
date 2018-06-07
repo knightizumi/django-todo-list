@@ -13,7 +13,9 @@ def index(request):
 def new(request):
     form = TodoModelForm(request.POST or None)
     if form.is_valid():
-        form.save()
+        todo = form.save(commit=False) # save without write database
+        todo.creator = request.user
+        todo.save()    # write in db
         return redirect('todo:index')
     return render(request,'todo/new.html',{'form':form})
 
@@ -29,7 +31,9 @@ def edit(request, pk):
     form = TodoModelForm(request.POST or None, instance=todo)
 
     if form.is_valid():
-        form.save()
+        todo = form.save(commit=False)  # save without write database
+        todo.creator = request.user
+        todo.save()  # write in db
         return redirect('todo:index')
 
     return render(request, 'todo/edit.html', {

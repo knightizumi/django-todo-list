@@ -59,6 +59,10 @@ $ pip freeze > ./requirements.txt
 # 安裝紀錄的套件及版本
 $ pip install -r requirements.txt
 
-
+#
+$ python manage.py shell
+$ from django.contrib.auth.models import User
+$  u=User.objects.first()
+$ u.email_user('title','content')
 
 ```
