@@ -31,6 +31,11 @@
     </div>
 
         {% block body %}{% endblock %}
+    <div class="row">
+        <div class="col-12 mt-5">
+            <a href="{% url 'todo:index' %}" class="btn btn-outline-primary  float-right">Home</a>
+        </div>
+    </div>
     </div>
 </body>
 </html>

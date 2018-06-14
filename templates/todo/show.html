@@ -8,6 +8,7 @@
       <a href="{% url 'todo:edit' todo.id %}" class="btn btn-outline-info float-right mt-1 mx-2">Edit</a>
         <h1>#{{ todo.id }} {{ todo.title }}</h1>
       <hr>
+       <p>tag {{ todo.tags.all |join:',' }}</p>
       <p>
         {{ todo.content }}
       </p>

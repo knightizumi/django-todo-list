@@ -6,8 +6,13 @@ class TodoModelForm(ModelForm):
     class Meta:
         model = Todo
         exclude=['creator']
+    def save(self, user, commit=True):
+        todo = super().save(commit=False)  # save without write database
+        todo.creator = user
+        todo.save()  # write in db
 
-
+        self.save_m2m()   # self==>this
+        return todo
 
 class DeleteConfirmForm(Form):
     # 繼承form
