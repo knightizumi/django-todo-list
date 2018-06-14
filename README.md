@@ -65,4 +65,8 @@ $ from django.contrib.auth.models import User
 $  u=User.objects.first()
 $ u.email_user('title','content')
 
+# 安裝mysqlclient
+$ pip install mysqlclient
+
+
 ```
